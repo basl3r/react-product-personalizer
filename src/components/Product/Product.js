@@ -4,7 +4,6 @@ import ProductImage from './ProductImage/ProductImage';
 import ProductForm from './ProductForm/ProductForm';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import clsx from 'clsx';
 
 
 const Product = props => {
@@ -27,7 +26,13 @@ const Product = props => {
           <h2 className={styles.name}>{props.title}</h2>
           <span className={styles.price}>Price: {getPrice()}$</span>
         </header>
-        <ProductForm props={props} currentColor={currentColor} setCurrentColor={setCurrentColor} currentSize={currentSize} setCurrentSize={setCurrentSize} getPrice={getPrice} />
+        <ProductForm 
+          props={props} 
+          currentColor={currentColor} setCurrentColor={setCurrentColor} 
+          currentSize={currentSize} 
+          setCurrentSize={setCurrentSize} 
+          getPrice={getPrice} 
+        />
       </div>
     </article>
   )
