@@ -4,14 +4,14 @@ import OptionSize from './OptionSize/OptionSize';
 import OptionColor from './OptionColor/OptionColor';
 import PropTypes from 'prop-types';
 
-const ProductForm = ({props, currentSize, setCurrentSize, currentColor, setCurrentColor, getPrice}) => {
+const ProductForm = ({props, currentSize, setCurrentSize, currentColor, setCurrentColor, price}) => {
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log('SUMMARY')
     console.log('==============');
     console.log(`Name: ${props.title}`);
-    console.log(`Price: ${getPrice()}$`);
+    console.log(`Price: ${price}$`);
     console.log(`Size: ${currentSize}`);
     console.log(`Color: ${currentColor}`);
   }
